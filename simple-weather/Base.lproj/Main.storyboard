@@ -80,6 +80,11 @@
                         <viewLayoutGuide key="safeArea" id="axq-04-67R"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cityImageView" destination="hre-pG-U7Z" id="wwj-dw-fJS"/>
+                        <outlet property="cityNameLabel" destination="PRV-Qt-O2l" id="3Gz-ff-P22"/>
+                        <outlet property="cityTemperatureLabel" destination="hue-Id-Juz" id="A7k-I2-2b3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20e-6W-tgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

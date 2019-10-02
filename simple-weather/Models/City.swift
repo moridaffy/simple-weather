@@ -7,15 +7,11 @@
 //
 
 class City {
-  let id: String
   let name: String
-  let temperature: Int
-  let imageUrl: String?
+  var imageUrl: String?
+  var temperature: Int?
   
-  init(id: String, name: String, temperature: Int, imageUrl: String?) {
-    self.id = id
+  init(name: String) {
     self.name = name
-    self.temperature = temperature
-    self.imageUrl = imageUrl
   }
 }

@@ -9,6 +9,7 @@
 class CityTableViewCellModel {
   
   let city: City
+  weak var view: CityTableViewCell?
   
   init(city: City) {
     self.city = city

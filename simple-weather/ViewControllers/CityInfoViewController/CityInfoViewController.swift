@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CityInfoViewController: UIViewController {
   
@@ -22,5 +23,9 @@ class CityInfoViewController: UIViewController {
   
   func setup(model: CityInfoViewModel) {
     self.model = model
+  }
+  
+  private func setupUI() {
+    cityImageView.kf.setImage(with: URL(string: model.city.imageUrl ?? ""), placeholder: nil, options: [])
   }
 }

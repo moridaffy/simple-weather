@@ -31,8 +31,11 @@ class  CityListViewController: UIViewController {
     tableView.refreshControl = refresher
     self.refresher = refresher
   }
+  
   private func openCityInfoViewController(city: City) {
-    
+    guard let cityInfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CityInfoViewController") as? CityInfoViewController else { return }
+    cityInfoViewController.setup(model: CityInfoViewModel(city: city))
+    navigationController?.pushViewController(cityInfoViewController, animated: true)
   }
   
   @objc private func pulledToRefresh() {
@@ -54,8 +57,7 @@ extension CityListViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell") as? CityTableViewCell else { fatalError() }
-    let city = City(id: "city", name: model.cities[indexPath.row], temperature: 10, imageUrl: "https://pixabay.com/get/57e5d0454f54ad14f6da8c7dda79367f1036dde750586c48702972dd9e4bc650bb_640.jpg")
-    cell.setup(model: CityTableViewCellModel(city: city))
+    cell.setup(model: CityTableViewCellModel(city: model.cities[indexPath.row]))
     return cell
   }
   

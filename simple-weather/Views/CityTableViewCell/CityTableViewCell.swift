@@ -19,8 +19,18 @@ class CityTableViewCell: UITableViewCell {
   
   func setup(model: CityTableViewCellModel) {
     self.model = model
+    self.model.view = self
     setupLabels()
-    setupImage()
+    loadImage()
+    loadTemperature()
+  }
+  
+  func updateTemperatureLabel(_ temperature: Int? = nil) {
+    if let temperature = temperature ?? model.city.temperature {
+      temperatureLabel.text = "\(temperature)°"
+    } else {
+      temperatureLabel.text = "..."
+    }
   }
   
   private func setupLabels() {
@@ -29,10 +39,10 @@ class CityTableViewCell: UITableViewCell {
     nameLabel.text = model.city.name
     temperatureLabel.textColor = UIColor.white
     temperatureLabel.font = UIFont.systemFont(ofSize: 31.0, weight: .semibold)
-    temperatureLabel.text = "\(model.city.temperature)"
+    updateTemperatureLabel()
   }
   
-  private func setupImage() {
+  private func loadImage() {
     let placeholderImage = #imageLiteral(resourceName: "city_placeholder_small")
     APIManager.shared.getWallpaperUrl(cityName: model.city.name) { [weak self] (urlString, error) in
       if let url = URL(string: urlString ?? "") {
@@ -40,6 +50,16 @@ class CityTableViewCell: UITableViewCell {
       } else {
         self?.backgroundImageView.image = placeholderImage
         NSLog("🔥 Unable to download image: \(error?.localizedDescription ?? "Unknown error")")
+      }
+    }
+  }
+  
+  private func loadTemperature() {
+    APIManager.shared.getTemperature(cityName: model.city.name) { [weak self] (temperature, error) in
+      if let temperature = temperature {
+        self?.updateTemperatureLabel(temperature)
+      } else {
+        NSLog("🔥 Unable to get temperature: \(error?.localizedDescription ?? "Unknown error")")
       }
     }
   }
