@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,15 @@
 		0C2BBE0023446B220031CAF2 /* CityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBDFF23446B220031CAF2 /* CityListViewModel.swift */; };
 		0C2BBE0223446B4D0031CAF2 /* CityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE0123446B4D0031CAF2 /* CityInfoViewController.swift */; };
 		0C2BBE0423446B880031CAF2 /* CityInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE0323446B880031CAF2 /* CityInfoViewModel.swift */; };
+		0C2BBE0723446BDD0031CAF2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE0623446BDD0031CAF2 /* APIManager.swift */; };
+		0C2BBE0A23446C660031CAF2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0C2BBE0923446C660031CAF2 /* Alamofire */; };
+		0C2BBE0D23446CC50031CAF2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0C2BBE0C23446CC50031CAF2 /* Kingfisher */; };
+		0C2BBE1123446D6B0031CAF2 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE1023446D6B0031CAF2 /* City.swift */; };
+		0C2BBE1523446DB60031CAF2 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE1323446DB60031CAF2 /* CityTableViewCell.swift */; };
+		0C2BBE1623446DB60031CAF2 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2BBE1423446DB60031CAF2 /* CityTableViewCell.xib */; };
+		0C2BBE1823446DC50031CAF2 /* CityTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE1723446DC50031CAF2 /* CityTableViewCellModel.swift */; };
+		0C2BBE1A234476590031CAF2 /* PixabayCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE19234476590031CAF2 /* PixabayCodable.swift */; };
+		0C2BBE1C234476A00031CAF2 /* PixabayImageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2BBE1B234476A00031CAF2 /* PixabayImageCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,13 @@
 		0C2BBDFF23446B220031CAF2 /* CityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewModel.swift; sourceTree = "<group>"; };
 		0C2BBE0123446B4D0031CAF2 /* CityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoViewController.swift; sourceTree = "<group>"; };
 		0C2BBE0323446B880031CAF2 /* CityInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoViewModel.swift; sourceTree = "<group>"; };
+		0C2BBE0623446BDD0031CAF2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0C2BBE1023446D6B0031CAF2 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		0C2BBE1323446DB60031CAF2 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		0C2BBE1423446DB60031CAF2 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
+		0C2BBE1723446DC50031CAF2 /* CityTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCellModel.swift; sourceTree = "<group>"; };
+		0C2BBE19234476590031CAF2 /* PixabayCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayCodable.swift; sourceTree = "<group>"; };
+		0C2BBE1B234476A00031CAF2 /* PixabayImageCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayImageCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2BBE0D23446CC50031CAF2 /* Kingfisher in Frameworks */,
+				0C2BBE0A23446C660031CAF2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +81,9 @@
 				0C2BBDE623446AAA0031CAF2 /* AppDelegate.swift */,
 				0C2BBDEC23446AAA0031CAF2 /* Main.storyboard */,
 				0C2BBDFA23446AF80031CAF2 /* ViewControllers */,
+				0C2BBE0E23446D510031CAF2 /* Views */,
+				0C2BBE0F23446D5C0031CAF2 /* Models */,
+				0C2BBE0523446BCF0031CAF2 /* Managers */,
 				0C2BBDEF23446AAB0031CAF2 /* Assets.xcassets */,
 				0C2BBDF123446AAB0031CAF2 /* LaunchScreen.storyboard */,
 				0C2BBDF423446AAB0031CAF2 /* Info.plist */,
@@ -97,6 +118,42 @@
 			path = CityInfoViewController;
 			sourceTree = "<group>";
 		};
+		0C2BBE0523446BCF0031CAF2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0C2BBE0623446BDD0031CAF2 /* APIManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0C2BBE0E23446D510031CAF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C2BBE1223446DA10031CAF2 /* CityTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C2BBE0F23446D5C0031CAF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C2BBE1023446D6B0031CAF2 /* City.swift */,
+				0C2BBE19234476590031CAF2 /* PixabayCodable.swift */,
+				0C2BBE1B234476A00031CAF2 /* PixabayImageCodable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0C2BBE1223446DA10031CAF2 /* CityTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C2BBE1423446DB60031CAF2 /* CityTableViewCell.xib */,
+				0C2BBE1323446DB60031CAF2 /* CityTableViewCell.swift */,
+				0C2BBE1723446DC50031CAF2 /* CityTableViewCellModel.swift */,
+			);
+			path = CityTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +170,10 @@
 			dependencies = (
 			);
 			name = "simple-weather";
+			packageProductDependencies = (
+				0C2BBE0923446C660031CAF2 /* Alamofire */,
+				0C2BBE0C23446CC50031CAF2 /* Kingfisher */,
+			);
 			productName = "simple-weather";
 			productReference = 0C2BBDE323446AAA0031CAF2 /* simple-weather.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +202,10 @@
 				Base,
 			);
 			mainGroup = 0C2BBDDA23446AAA0031CAF2;
+			packageReferences = (
+				0C2BBE0823446C660031CAF2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0C2BBE0B23446CC50031CAF2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0C2BBDE423446AAA0031CAF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,6 +222,7 @@
 			files = (
 				0C2BBDF323446AAB0031CAF2 /* LaunchScreen.storyboard in Resources */,
 				0C2BBDF023446AAB0031CAF2 /* Assets.xcassets in Resources */,
+				0C2BBE1623446DB60031CAF2 /* CityTableViewCell.xib in Resources */,
 				0C2BBDEE23446AAA0031CAF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,11 +234,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2BBE0723446BDD0031CAF2 /* APIManager.swift in Sources */,
 				0C2BBE0423446B880031CAF2 /* CityInfoViewModel.swift in Sources */,
 				0C2BBE0023446B220031CAF2 /* CityListViewModel.swift in Sources */,
+				0C2BBE1823446DC50031CAF2 /* CityTableViewCellModel.swift in Sources */,
 				0C2BBDE723446AAA0031CAF2 /* AppDelegate.swift in Sources */,
+				0C2BBE1C234476A00031CAF2 /* PixabayImageCodable.swift in Sources */,
 				0C2BBDFE23446B1A0031CAF2 /* CityListViewController.swift in Sources */,
 				0C2BBE0223446B4D0031CAF2 /* CityInfoViewController.swift in Sources */,
+				0C2BBE1523446DB60031CAF2 /* CityTableViewCell.swift in Sources */,
+				0C2BBE1A234476590031CAF2 /* PixabayCodable.swift in Sources */,
+				0C2BBE1123446D6B0031CAF2 /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +442,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C2BBE0823446C660031CAF2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "5.0.0-rc.2";
+			};
+		};
+		0C2BBE0B23446CC50031CAF2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C2BBE0923446C660031CAF2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C2BBE0823446C660031CAF2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0C2BBE0C23446CC50031CAF2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C2BBE0B23446CC50031CAF2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C2BBDDB23446AAA0031CAF2 /* Project object */;
 }

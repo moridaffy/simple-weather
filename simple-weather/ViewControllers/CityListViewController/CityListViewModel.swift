@@ -7,5 +7,11 @@
 //
 
 class CityListViewModel {
-  
+  let cities: [String] = ["Moscow",
+                          "Saint Petersburg",
+                          "London",
+                          "New York",
+                          "Barcelona",
+                          "Milan",
+                          "Berlin"]
 }

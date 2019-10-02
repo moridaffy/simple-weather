@@ -10,6 +10,10 @@ import UIKit
 
 class CityInfoViewController: UIViewController {
   
+  @IBOutlet private weak var cityImageView: UIImageView!
+  @IBOutlet private weak var cityNameLabel: UILabel!
+  @IBOutlet private weak var cityTemperatureLabel: UILabel!
+  
   private var model: CityInfoViewModel!
   
   override func viewDidLoad() {
