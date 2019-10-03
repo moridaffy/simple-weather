@@ -9,9 +9,15 @@
 class City {
   let name: String
   var imageUrl: String?
-  var temperature: Int?
+  var temperature: Int? {
+    didSet {
+      print("didSet temperature for \(name)")
+      DataManager.shared.saveCachedTemperature(for: self, temperature: temperature)
+    }
+  }
   
   init(name: String) {
     self.name = name
+    self.temperature = DataManager.shared.getCachedTemperature(for: self)
   }
 }

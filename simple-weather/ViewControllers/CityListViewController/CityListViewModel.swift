@@ -8,7 +8,13 @@
 
 class CityListViewModel {
   
-  let cities: [City] = [City(name: "London"),
-                        City(name: "Berlin"),
-                        City(name: "Milan")]
+  let cities: [City] = [
+    City(name: "Moscow"),
+    City(name: "Barcelona"),
+    City(name: "Budapest"),
+    City(name: "Paris"),
+    City(name: "London"),
+    City(name: "Berlin"),
+    City(name: "Milan")
+  ]
 }

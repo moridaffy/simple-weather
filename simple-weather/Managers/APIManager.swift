@@ -54,5 +54,4 @@ class APIManager {
       completion(imageUrl, response.error)
     }
   }
-  
 }

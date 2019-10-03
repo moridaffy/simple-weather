@@ -12,13 +12,13 @@ import Kingfisher
 class CityInfoViewController: UIViewController {
   
   @IBOutlet private weak var cityImageView: UIImageView!
-  @IBOutlet private weak var cityNameLabel: UILabel!
   @IBOutlet private weak var cityTemperatureLabel: UILabel!
   
   private var model: CityInfoViewModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupUI()
   }
   
   func setup(model: CityInfoViewModel) {
@@ -26,6 +26,19 @@ class CityInfoViewController: UIViewController {
   }
   
   private func setupUI() {
-    cityImageView.kf.setImage(with: URL(string: model.city.imageUrl ?? ""), placeholder: nil, options: [])
+    title = model.city.name
+    
+    let placeholderImage = #imageLiteral(resourceName: "city_placeholder_small")
+    cityImageView.kf.setImage(with: URL(string: model.city.imageUrl ?? ""), placeholder: placeholderImage, options: [.forceTransition, .transition(.fade(0.2))])
+    
+    if let temperature = model.city.temperature {
+      cityTemperatureLabel.textColor = UIColor.black
+      cityTemperatureLabel.font = UIFont.systemFont(ofSize: 50.0, weight: .semibold)
+      cityTemperatureLabel.text = "\(temperature)°"
+    } else {
+      cityTemperatureLabel.textColor = UIColor.gray
+      cityTemperatureLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .regular)
+      cityTemperatureLabel.text = "Ooops... Something went wrong :^("
+    }
   }
 }

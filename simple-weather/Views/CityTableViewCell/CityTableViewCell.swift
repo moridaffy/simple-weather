@@ -46,7 +46,8 @@ class CityTableViewCell: UITableViewCell {
     let placeholderImage = #imageLiteral(resourceName: "city_placeholder_small")
     APIManager.shared.getWallpaperUrl(cityName: model.city.name) { [weak self] (urlString, error) in
       if let url = URL(string: urlString ?? "") {
-        self?.backgroundImageView.kf.setImage(with: url, placeholder: placeholderImage, options: [.forceTransition, .transition(.fade(0.2))])
+        self?.backgroundImageView.kf.setImage(with: url, placeholder: placeholderImage, options: [.transition(.fade(0.2))])
+        self?.model.city.imageUrl = urlString
       } else {
         self?.backgroundImageView.image = placeholderImage
         NSLog("🔥 Unable to download image: \(error?.localizedDescription ?? "Unknown error")")
@@ -56,8 +57,9 @@ class CityTableViewCell: UITableViewCell {
   
   private func loadTemperature() {
     APIManager.shared.getTemperature(cityName: model.city.name) { [weak self] (temperature, error) in
-      if let temperature = temperature {
+      if let temperature = temperature, temperature != self?.model.city.temperature {
         self?.updateTemperatureLabel(temperature)
+        self?.model.city.temperature = temperature
       } else {
         NSLog("🔥 Unable to get temperature: \(error?.localizedDescription ?? "Unknown error")")
       }

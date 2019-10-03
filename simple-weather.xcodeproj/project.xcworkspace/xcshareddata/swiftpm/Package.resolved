@@ -11,6 +11,24 @@
         }
       },
       {
+        "package": "Bagel",
+        "repositoryURL": "https://github.com/ricobeck/Bagel",
+        "state": {
+          "branch": "master",
+          "revision": "01ae0d573e63d5f4e368df5625ebb9741906dcc6",
+          "version": null
+        }
+      },
+      {
+        "package": "CocoaAsyncSocket",
+        "repositoryURL": "https://github.com/ricobeck/CocoaAsyncSocket.git",
+        "state": {
+          "branch": null,
+          "revision": "9b2cfedabfa421523e5edd9f2409999ba567a427",
+          "version": null
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
